@@ -24,6 +24,7 @@ jobs:
         with:
           images: esetnederland/eset-protect-console
           tags: |
+            type=ref,event=branch
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
 
