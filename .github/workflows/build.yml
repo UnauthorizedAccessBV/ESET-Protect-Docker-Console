@@ -40,5 +40,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          description: ESET Protect console container. For use with the ESET Protect server container.
+          short-description: ${{ github.event.repository.description }}
+          readme-filepath: ./README.md
           repository: esetnederland/eset-protect-console
