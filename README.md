@@ -1,3 +1,5 @@
+![Build](https://github.com/UnauthorizedAccessBV/ESET-Protect-Docker-Console/actions/workflows/build.yml/badge.svg)
+
 # ESET PROTECT - Web Console
 
 This container provides the `Web Console` component of `ESET PROTECT`. See the [eset-protect-server](https://hub.docker.com/r/esetnederland/eset-protect-server) page for the server component.
