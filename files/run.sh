@@ -14,7 +14,7 @@ fi
 # Set server_address
 if [ -z "${ESMC_SERVER}" ]
 then
-    ESMC_SERVER="esmc-server"
+    ESMC_SERVER="eset-protect-server"
 fi
 
 sed -i -r "s|^([# ]{0,2})server_address=.*$|server_address=$ESMC_SERVER|" $CONFIG_FILE
