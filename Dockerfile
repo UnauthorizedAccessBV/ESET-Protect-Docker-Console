@@ -15,7 +15,7 @@ RUN apt-get update \
 RUN groupadd -r eset -g 3537 \
   &&  useradd --no-log-init -r -g eset -u 3537 eset
 
-# Add era.war, index.html, context.xml, healthcheck.sh and run.sh
+# Add era_x64.war, index.html, context.xml, healthcheck.sh and run.sh
 ADD https://repository.eset.com/v1/com/eset/apps/business/era/webconsole/v10/${ESET_VERSION}/era_x64.war /tmp/
 COPY files/index.html /usr/local/tomcat/webapps/ROOT/index.html
 COPY files/context.xml /usr/local/tomcat/conf/context.xml
@@ -29,8 +29,8 @@ RUN chmod +x \
 RUN mkdir -p /usr/local/tomcat/webapps/era/WEB-INF/classes/sk/eset/era/g2webconsole/server/modules \
   && mkdir /config \
   && ln -s /config /usr/local/tomcat/webapps/era/WEB-INF/classes/sk/eset/era/g2webconsole/server/modules/config \
-  && unzip -d /usr/local/tomcat/webapps/era /tmp/era.war \
-  && rm -r /tmp/era.war \
+  && unzip -d /usr/local/tomcat/webapps/era /tmp/era_x64.war \
+  && rm -r /tmp/era_x64.war \
   && chown -R eset:eset /config
 
 # Volumes
