@@ -2,7 +2,7 @@
 FROM tomcat:9-jdk16-openjdk-slim
 
 # Version
-ARG ESET_VERSION=9.1.292.0
+ARG ESET_VERSION=10.0.132.0
 
 # Install dependencies
 RUN apt-get update \
