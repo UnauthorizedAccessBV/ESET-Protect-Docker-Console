@@ -16,7 +16,7 @@ RUN groupadd -r eset -g 3537 \
   &&  useradd --no-log-init -r -g eset -u 3537 eset
 
 # Add era.war, index.html, context.xml, healthcheck.sh and run.sh
-ADD https://repository.eset.com/v1/com/eset/apps/business/era/webconsole/v9/${ESET_VERSION}/era.war /tmp/
+ADD https://repository.eset.com/v1/com/eset/apps/business/era/webconsole/v10/${ESET_VERSION}/era_x64.war /tmp/
 COPY files/index.html /usr/local/tomcat/webapps/ROOT/index.html
 COPY files/context.xml /usr/local/tomcat/conf/context.xml
 COPY files/run.sh /run.sh
