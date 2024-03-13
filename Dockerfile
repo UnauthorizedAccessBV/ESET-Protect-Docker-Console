@@ -1,8 +1,8 @@
-# See https://support.eset.com/en/install-esmc-web-console-using-jdk
-FROM tomcat:9-jdk16-openjdk-slim
+# See https://help.eset.com/protect_install/90/en-US/component_installation_webconsole_windows_manually.html
+FROM tomcat:9.0-jdk21
 
 # Version
-ARG ESET_VERSION=10.0.132.0
+ARG ESET_VERSION=11.0.194.0
 
 # Install dependencies
 RUN apt-get update \
@@ -16,7 +16,7 @@ RUN groupadd -r eset -g 3537 \
   &&  useradd --no-log-init -r -g eset -u 3537 eset
 
 # Add era_x64.war, index.html, context.xml, healthcheck.sh and run.sh
-ADD https://repository.eset.com/v1/com/eset/apps/business/era/webconsole/v10/${ESET_VERSION}/era_x64.war /tmp/
+ADD https://repository.eset.com/v1/com/eset/apps/business/era/webconsole/v11/${ESET_VERSION}/era_x64.war /tmp/
 COPY files/index.html /usr/local/tomcat/webapps/ROOT/index.html
 COPY files/context.xml /usr/local/tomcat/conf/context.xml
 COPY files/run.sh /run.sh
