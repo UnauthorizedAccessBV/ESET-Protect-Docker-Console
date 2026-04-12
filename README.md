@@ -11,7 +11,7 @@ Run the following command to start the ESET PROTECT Console. The `ESMC_SERVER` p
 docker run --rm --tty --interactive --publish 8080:8080 esetnederland/eset-protect-console
 ```
 
-The console should now be reachable by browsing to `http://127.0.0.1:8080`.
+The console should now be reachable by browsing to `http://127.0.0.1:8080`. See the default credentials in the server's [readme](https://github.com/UnauthorizedAccessBV/ESET-Protect-Docker-Server) 
 
 ## Configuration
 The following environment variables can be used for configuration:

@@ -2,7 +2,7 @@
 FROM tomcat:9.0-jdk21 AS builder
 
 # Version
-ARG ESET_VERSION=12.1.260.0
+ARG ESET_VERSION=13.0.442.0
 
 # Install dependencies
 RUN apt-get update \
@@ -13,7 +13,7 @@ RUN apt-get update \
 
 WORKDIR /tmp
 # download archive and unpack
-ADD https://repository.eset.com/v1/com/eset/apps/business/era/webconsole/v12/${ESET_VERSION}/era_x64.war /tmp/
+ADD https://repository.eset.com/v1/com/eset/apps/business/era/webconsole/v13/${ESET_VERSION}/era_x64.war /tmp/
 RUN unzip -d /usr/local/tomcat/webapps/era /tmp/era_x64.war
 
 FROM tomcat:9.0-jdk21
