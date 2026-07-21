@@ -2,7 +2,7 @@
 FROM tomcat:9.0-jdk21 AS builder
 
 # Version
-ARG ESET_VERSION=13.0.442.0
+ARG ESET_VERSION=13.0.450.0
 
 # Install dependencies
 RUN apt-get update \
